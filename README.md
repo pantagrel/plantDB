@@ -1,5 +1,5 @@
 ##setting up a project
-__
+_
 
 ###Open a virtualenv or make a new one. 
 
@@ -58,7 +58,7 @@ South, as well as any other apps you will install later, has to be added to the 
 Be sure to include that trailing comma.
 
 ##Setting up the database
-__
+_
 
 ###Pick the database you'll be using and get that set up. 
 
@@ -90,16 +90,16 @@ At this point, this set up all the tables since this is the first time we've run
 This command creates tables that don't already exist--it *DOESN'T* UPDATE THE DATABASE.
 
 
-###Django shell
-__
+##Django shell
+_
 
 ##Questions
-__
+_
 * How do I update entries in the database?
 * 
 
 ##Tips
-__
+_
 
 - Play around in the interactive Python shell that comes with Django:
 
@@ -116,11 +116,12 @@ __
 
 - Change password:
 	
-		manage.py changepassword <username>
+    manage.py changepassword <username>
 
 
 
 ##Things I need to know more about:
+_
 
 - Creating and working with custom classes
 - Deployment
