@@ -1,5 +1,5 @@
-##setting up a project
-_
+##Setting up a project
+___
 
 ###Open a virtualenv or make a new one. 
 
@@ -58,7 +58,7 @@ South, as well as any other apps you will install later, has to be added to the 
 Be sure to include that trailing comma.
 
 ##Setting up the database
-_
+___
 
 ###Pick the database you'll be using and get that set up. 
 
@@ -91,37 +91,37 @@ This command creates tables that don't already exist--it *DOESN'T* UPDATE THE DA
 
 
 ##Django shell
-_
+___
 
 ##Questions
-_
+___
 * How do I update entries in the database?
 * 
 
 ##Tips
-_
+___
 
 - Play around in the interactive Python shell that comes with Django:
 
-    python manage.py shell
+        python manage.py shell
     
 - Here is the syntax for returning a more descriptive `__unicode__` object? One example:
 
-    return ('%s %s' % (self.genus, self.species))
+        return ('%s %s' % (self.genus, self.species))
 
 
 - Create a new superuser:
 
-	manage.py changepassword admin
+	   manage.py changepassword admin
 
 - Change password:
 	
-    manage.py changepassword <username>
+        manage.py changepassword <username>
 
 
 
 ##Things I need to know more about:
-_
+___
 
 - Creating and working with custom classes
 - Deployment
