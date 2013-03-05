@@ -101,22 +101,21 @@ ___
 ##Tips
 ___
 
-- Play around in the interactive Python shell that comes with Django:
+Play around in the interactive Python shell that comes with Django:
 
-        python manage.py shell
+    python manage.py shell
     
-- Here is the syntax for returning a more descriptive `__unicode__` object? One example:
+Here is the syntax for returning a more descriptive `__unicode__` object? One example:
 
-        return ('%s %s' % (self.genus, self.species))
+    return ('%s %s' % (self.genus, self.species))
 
+Create a new superuser:
 
-- Create a new superuser:
+    manage.py changepassword admin
 
-	   manage.py changepassword admin
-
-- Change password:
+Change password:
 	
-        manage.py changepassword <username>
+    manage.py changepassword <username>
 
 
 
