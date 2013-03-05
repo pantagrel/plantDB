@@ -1,5 +1,5 @@
 ##setting up a project
-___
+__
 
 ###Open a virtualenv or make a new one. 
 
@@ -91,7 +91,7 @@ This command creates tables that don't already exist--it *DOESN'T* UPDATE THE DA
 
 
 ###Django shell
-___
+__
 
 ##Questions
 __
@@ -99,7 +99,7 @@ __
 * 
 
 ##Tips
-___
+__
 
 - Play around in the interactive Python shell that comes with Django:
 
@@ -112,7 +112,7 @@ ___
 
 - Create a new superuser:
 
-		manage.py changepassword admin
+	manage.py changepassword admin
 
 - Change password:
 	
