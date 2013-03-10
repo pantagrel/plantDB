@@ -108,6 +108,10 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+STATICFILES_DIRS = (
+    "/Users/kristin/python_class/training.python_web/assignments/plantDB/plant/static",
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',

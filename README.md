@@ -90,8 +90,43 @@ At this point, this set up all the tables since this is the first time we've run
 This command creates tables that don't already exist--it *DOESN'T* UPDATE THE DATABASE.
 
 
-##Django shell
+##Django admin
 ___
+###Enable the admin
+In `settings.py` file, uncomment (approx) line 118: `django.contrib.admin`. In `urls.py` file, uncomment lines 4, 5, and 16: `from django.contrib import admin`, `admin.autodiscover()`, and `url(r'^admin/', include(admin.site.urls))`.
+
+###Make plants app show up in the admin
+Create an admin file inside the app folder.
+
+    from django.contrib import admin
+    from plant.models import Plant
+    admin.site.register(Plant)
+    
+**Though the last line may need to be augmented with a PlantAdmin function. Will expand this explanation later.
+
+##Building the app
+___
+Let's look at how all the files fit together. It's called 'loose coupling'. This is preliminary understandings, after a few weeks of working with Django. (Let's see how this info shakes out in a few months.)
+
+###`models.py`
+This piece of the app is what builds the database. You name your tables here, and set the type of data those tables will take. There can be multiple classes in a `models.py` file. Model field reference page in the Django documentation is helpful for styling the data. `django.db.models.fields`
+
+* How many classes are usually in a given file? Just in general.
+
+* The different tables are described as "metadata"...but what is and isn't metadata?
+
+###`views.py`
+This piece of the app is where different page views are defined. You're syncing up metadata from `models.py` with template display information via a given function that you write within `views.py`. 
+
+###`app/urls.py`
+This piece is where you define what views will appear for a given URL. This makes use of regular expressions, which I do not currently understand how to write, to find and build appropriate URLs at appropriate times. There is other setup/coupling data happening that I also don't totally understand yet.
+
+###`project/urls.py`
+This piece is a topmost level of URL-defining. All the app `urls.py` data will do it's thing and then get finally routed through the criteria set up in this file. This is how you manage all the URL info coming in from all the separate apps comprising a given project.
+
+###Templates
+This piece pulls in information from `views.py`--dictionaries containing object information about stuff in your database, and how to display certain portions of that dictionary data in on a given web page. Variables and simple loop-stuff can be used. Templates also help build the URLs, using the structures we set up in our `urls.py` files and the variables that get passed in from those dictionaries mentioned above.
+
 
 ##Questions
 ___
