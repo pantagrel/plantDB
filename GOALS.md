@@ -1,7 +1,7 @@
 #The goals of the modest plant database project
 ___
 
-1. Make a web app that works on the internet.
+1. Make a web app that works on the internet. [not happening by 12.00 3.15.2013]
 2. With css and image files.
 3. Different types of data can references other types of data. With links!
 
